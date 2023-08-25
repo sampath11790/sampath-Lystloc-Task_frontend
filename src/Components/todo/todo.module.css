@@ -1,0 +1,91 @@
+.maincontainer {
+  background-color: rgb(196, 196, 233);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  list-style: none;
+}
+.ulcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.headercontainer {
+  display: flex;
+  gap: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.eachitem {
+  background-color: rgb(106, 58, 145);
+  background-color: white;
+  list-style: none;
+  width: 500px;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(85, 16, 85);
+
+  margin: 3px 5px 0px;
+  /* padding: 3px 5px 0px */
+  padding-left: 10px;
+  font-size: 22px;
+  border-radius: 15px;
+  border: 0.1px solid purple;
+}
+
+.buttoncontainer {
+  display: flex;
+  align-items: center;
+}
+.inputcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 30px;
+}
+.inputelement {
+  /* display: block; */
+  padding: 15px;
+  width: 340px;
+
+  border-style: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.addtodobtn {
+  padding: 10px;
+  border-style: none;
+  border-radius: 15px;
+  width: 120px;
+  margin: 10px 0px;
+  background-color: rgb(63, 8, 63);
+  color: aliceblue;
+  font-size: 20px;
+}
+li {
+  padding: 10px;
+}
+
+.logouttodobtn {
+  padding: 10px;
+  border-style: none;
+  border-radius: 15px;
+  width: 120px;
+  margin: 10px 0px;
+  background-color: rgb(211, 191, 12);
+  color: aliceblue;
+  font-size: 20px;
+  margin-left: 10px;
+}
