@@ -2,14 +2,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 let initialstate = {
   todolist: [
-    { id: 1, title: "item1" },
-    { id: 2, title: "item2" },
+    // { id: 1, title: "item1" },
+    // { id: 2, title: "item2" },
   ],
   //   initaltitle: "",
   edit: "",
   pageCount: 5,
   page: 1,
-  totalcount: 10,
+  totalcount: 0,
   currentpage: 1,
   curstatus: false,
   statusmessage: "",

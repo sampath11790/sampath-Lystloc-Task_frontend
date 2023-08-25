@@ -31,6 +31,7 @@ function SignIn() {
     };
 
     if (obj.email === "" && obj.password === "") {
+      alert("plese enter valid data ");
       return;
     }
 

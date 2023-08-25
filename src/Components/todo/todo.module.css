@@ -29,6 +29,7 @@
   background-color: white;
   list-style: none;
   width: 500px;
+  /* flex-wrap: wrap; */
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -37,7 +38,7 @@
 
   margin: 3px 5px 0px;
   /* padding: 3px 5px 0px */
-  padding-left: 10px;
+  /* padding-left: 10px; */
   font-size: 22px;
   border-radius: 15px;
   border: 0.1px solid purple;
@@ -88,4 +89,7 @@ li {
   color: aliceblue;
   font-size: 20px;
   margin-left: 10px;
+}
+.checkboxcontainer {
+  display: flex;
 }

@@ -51,12 +51,15 @@ export default function AlertBox() {
   };
 
   return (
-    <Stack spacing={2} sx={{ width: "80%" }}>
+    <Stack
+      spacing={2}
+      sx={{ width: "100%", position: "absolute", top: "100px", left: "30px" }}
+    >
       {/* <Button variant="outlined" onClick={handleClick}>
         Open
       </Button> */}
       <Snackbar open={isopen} autoHideDuration={3000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={pgcolor} sx={{ width: "80%" }}>
+        <Alert onClose={handleClose} severity={pgcolor} sx={{ width: "100%" }}>
           {statusmessage}
         </Alert>
       </Snackbar>

@@ -22,9 +22,11 @@ function TodoList() {
       <AddTodo></AddTodo>
 
       <ul className={cls.ulcontainer}>
-        {todolist.map((todo) => (
-          <TodoListItem key={todo.id} todo={todo}></TodoListItem>
-        ))}
+        {todolist.length > 0 &&
+          todolist.map((todo) => (
+            <TodoListItem key={todo.id} todo={todo}></TodoListItem>
+          ))}
+        {todolist.length == 0 && <h2>Your task is empty add task</h2>}
       </ul>
       <PaginationList totalcount={totalcount}></PaginationList>
     </div>

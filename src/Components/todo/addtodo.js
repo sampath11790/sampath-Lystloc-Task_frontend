@@ -11,10 +11,15 @@ function AddTodo() {
   const { edit, currentpage } = useSelector((state) => state.todo);
   const { token } = useSelector((state) => state.auth);
   const [newTodo, setNewTodo] = useState("");
+  const [inputerror, setInputerror] = useState(false);
   const [update, setUpdate] = useState(false);
   const dispatch = useDispatch();
 
   const handleAdd = () => {
+    if (newTodo.trim().length == 0) {
+      setInputerror(true);
+      return;
+    }
     if (newTodo.trim() && update != true) {
       dispatch(
         postTodo(
@@ -28,7 +33,9 @@ function AddTodo() {
       dispatch(setStatus({ curstatus: true, statusmessage: "processing.." }));
       setNewTodo("");
     } else {
-      dispatch(updateTodo({ title: newTodo }, token, edit.id, currentpage));
+      dispatch(
+        updateTodo({ ...edit, title: newTodo }, token, edit.id, currentpage)
+      );
       dispatch(
         setStatus({ curstatus: true, statusmessage: "processing....." })
       );
@@ -43,6 +50,13 @@ function AddTodo() {
       setUpdate(true);
     }
   }, [edit]);
+  useEffect(() => {
+    if (inputerror) {
+      setTimeout(() => {
+        setInputerror(false);
+      }, 3000);
+    }
+  }, [inputerror]);
   return (
     <div className={cls.inputcontainer}>
       {/* <h1>Todo List</h1> */}
@@ -58,6 +72,7 @@ function AddTodo() {
         </button>
         <Logout></Logout>
       </div>
+      {inputerror && <h2 style={{ color: "red" }}>Enter valid input data</h2>}
     </div>
   );
 }
